@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#Собрано все, что связано с построением графиков
+
 from gz_import import *
 from gz_mainlib import *
 

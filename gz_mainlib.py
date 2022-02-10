@@ -1,8 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[4]:
-
+#Основная библиотек по разнообразым расчетам и обработкам
 
 from gz_import import *
 from gz_const import *
