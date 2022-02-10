@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#Модуль загрузки и сохранения биржевых данных
+
 from gz_import import *
 from gz_const import *
 from gz_mainlib import *
@@ -12,6 +14,8 @@ dwnl_ver = '71'
 def dwnlver():
     print('Download ver:', dwnl_ver)
 
+    
+#Классы для многопоточности    
 class Mythread(Thread):
     def __init__(self, func, args, name=''):
         Thread.__init__(self)
@@ -109,6 +113,7 @@ def yfinfo_mt_load(tics, pool_size=75):
     sleep(0.1)
     return yf_dict #pd.DataFrame(yf_list)
     
+#загрузка в многопотоке с Yahoo
 def download_yahoo_mt(tics, 
                       t1=datetime.date(2020,1,1), t2=datetime.datetime.today().date(),
                       pool_size=75,
@@ -318,7 +323,7 @@ def download_yf_tics(tics, date_start=datetime.date(2020,1,1), date_end=datetime
     return dfb, dfa
 
 
-
+#загрузка в многопотоке с MOEX
 def download_moex_mt(tics, 
                      t1=datetime.date(2020,1,1), t2=datetime.datetime.today().date(),
                      pool_size=75,
