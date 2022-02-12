@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+#Модуль чтения и записи в файлы
+
 import os, fnmatch, time, sys
 import numpy as np
 import pandas as pd
